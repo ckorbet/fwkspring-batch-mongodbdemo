@@ -1,0 +1,18 @@
+# Mongo Configuration [codTienda,poblacion,direccion]
+spring:
+
+  data:
+    mongodb:
+      #host: localhost
+      #port: 27017
+      #database: admin
+      #username: mongoadmin
+      #password: secret
+      uri: mongodb://localhost:27017/test
+      
+  datasource:
+    jdbc-url: jdbc:oracle:thin:@${CLOUD_SQL_FWCER_DATABASE_TNS}
+    username: mongoadmin
+    password: secret
+    connection-factory-classname: oracle.jdbc.replay.OracleDataSourceImpl
+    initialization-mode: always
